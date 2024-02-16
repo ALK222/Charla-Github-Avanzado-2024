@@ -1,3 +1,11 @@
+---
+author:
+  - Alejandro Barrachina Argudo
+date: 2024
+subtitle: Ramas, comunicación, workflows
+title: Charla GitHub avanzado 2024
+---
+
 ::: frame
 Tabla de contenidos
 :::
@@ -219,6 +227,16 @@ distintas ramas y tener dos directorios fuente, la raíz del repositorio
 o una carpeta "/docs"
 :::
 
+::: frame
+![Opciones de GitHub pages antes de publicar la
+página](./Images/github_pages.png){width="70%"}
+:::
+
+::: frame
+![Opciones de GitHub pages después de publicar la
+página](./Images/github_pages_deploy.png){width="70%"}
+:::
+
 ## Jekyll
 
 ::: frame
@@ -227,6 +245,10 @@ Jekyll
 Estas páginas de github están construidas con Jekyll, permitiéndonos
 esto hacer pruebas en local, usar HTML o markdown y utilizar todos los
 plugins disponibles para Jekyll
+
+::: columns
+![image](./Images/jekyll.png){width="40%"}
+:::
 :::
 
 ::: frame
