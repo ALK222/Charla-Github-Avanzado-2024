@@ -1,0 +1,18 @@
+name: Build LaTeX document
+on: [push, pull_request]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: compile.sh
+        uses: dante-ev/latex-action@latest
+        with:
+          entrypoint: ./compile.sh
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: presentacion.pdf
+          path: ./presentacion/Presentacion.pdf
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
