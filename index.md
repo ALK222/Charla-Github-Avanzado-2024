@@ -1,6 +1,6 @@
 ---
 author:
-  - Alejandro Barrachina Argudo
+- Alejandro Barrachina Argudo
 date: 2024
 subtitle: Ramas, comunicación, workflows
 title: Charla GitHub avanzado 2024
@@ -20,28 +20,28 @@ Charla anterior:
 
 Se asume que:
 
-- Tenéis cuenta de GitHub
+-   Tenéis cuenta de GitHub
 
-- Sabéis hacer crear repositorios
+-   Sabéis hacer crear repositorios
 
-- Sabéis hacer _commit_, _push_, _pull_
-  :::
+-   Sabéis hacer *commit*, *push*, *pull*
+:::
 
 # Ramas
 
 ::: frame
 Ramas
 
-- Mantienen el desarrollo paralelo para distintas partes del programa
+-   Mantienen el desarrollo paralelo para distintas partes del programa
 
-- Mantienen separadas las versiones estables de las de desarrollo
+-   Mantienen separadas las versiones estables de las de desarrollo
 
-- Nos permiten proteger ciertas ramas
-  :::
+-   Nos permiten proteger ciertas ramas
+:::
 
 ::: frame
 ![origen de la imagen:
-<https://stackoverflow.com/questions/46827112/toggling-branch-tree-view-in-gitkraken>](./Images/ejemplo-ramas.png){width="70%"}
+<https://stackoverflow.com/questions/46827112/toggling-branch-tree-view-in-gitkraken>](../Images/ejemplo-ramas.png){width="70%"}
 :::
 
 ## Main
@@ -53,12 +53,12 @@ La rama Main (en proyectos antiguos también se puede encontrar como
 Master) es la rama principal del proyecto y la primera rama que se crea
 automáticamente al crear el repositorio.
 
-- Rama (normalmente) protegida para evitar código malicioso (de manera
-  intencional o no) sin supervisión.
+-   Rama (normalmente) protegida para evitar código malicioso (de manera
+    intencional o no) sin supervisión.
 
-- Generalmente es la rama estable del programa, solo se suben
-  versiones definitivas
-  :::
+-   Generalmente es la rama estable del programa, solo se suben
+    versiones definitivas
+:::
 
 ## Ramas secundarias
 
@@ -76,7 +76,7 @@ desarrollo para incorporar estos cambios a la rama principal.
 ::: frame
 Merge
 
-Un _Merge_ nos permite unificar un conjunto de _commits_ en un solo
+Un *Merge* nos permite unificar un conjunto de *commits* en un solo
 historial.
 
 Normalmente esto se hace entre los extremos de dos ramas para
@@ -89,25 +89,45 @@ distintos editores de texto o herramientas de gestión de git.
 ::: frame
 Pull Request
 
-Un _pull request_ es un mecanismo de GitHub para poder hacer _merge_ en
+Un *pull request* es un mecanismo de GitHub para poder hacer *merge* en
 proyectos ajenos o para solicitar feedback antes de hacer un merge en tu
 propio proyecto.
 
-En ciertos repositorios es obligatorio pasar una _pull request_ con
+En ciertos repositorios es obligatorio pasar una *pull request* con
 varios supervisores para poder contribuir si no eres parte del equipo.
 
-Tras una _pull request_ se hace un merge entre dos ramas.
+Tras una *pull request* se hace un merge entre dos ramas.
 :::
 
 ::: frame
 Fork
 
-Un _fork_ es un nuevo repositorio que comparte visibilidad y código con
+Un *fork* es un nuevo repositorio que comparte visibilidad y código con
 un repositorio original.
 
 Nos permite hacer modificaciones a un código ya existente y después
-mover esos cambios al repositorio original con una _pull request_ (o
+mover esos cambios al repositorio original con una *pull request* (o
 no).
+:::
+
+## Submódulos
+
+::: frame
+Submódulos En el desarrollo de un proyecto, a veces necesitamos otras
+herramientas o proyectos dentro. Una manera de gestionar esto desde git
+es el uso de submódulos
+
+Esto nos permite modularizar el desarollo, mantener todas las
+herramientas actualizadas de manera sencilla y poder trabajar en
+distintas partes del proyecto de manera independiente.
+:::
+
+::: frame
+Para incluir un submódulo en un proyecto, usamos el comando:
+
+<figure>
+<pre style="custombash"><code>git submodule add &lt;url&gt; &lt;ruta del submódulo&gt;</code></pre>
+</figure>
 :::
 
 # Workflows / Actions
@@ -130,7 +150,7 @@ Archivos
 Los archivos para github workflows se guardan en la carpeta
 **.github/wokrflows**.
 
-Estos archivos son de formato _yml_
+Estos archivos son de formato *yml*
 :::
 
 ## Estructura básica
@@ -229,17 +249,17 @@ o una carpeta "/docs"
 
 ::: frame
 ![Opciones de GitHub pages antes de publicar la
-página](./Images/github_pages.png){width="70%"}
+página](../Images/github_pages.png){width="70%"}
 :::
 
 ::: frame
 ![Opciones de GitHub pages después de publicar la
-página](./Images/github_pages_deploy.png){width="70%"}
+página](../Images/github_pages_deploy.png){width="70%"}
 :::
 
 ## Jekyll
 
-::: frame
+:::: frame
 Jekyll
 
 Estas páginas de github están construidas con Jekyll, permitiéndonos
@@ -247,24 +267,23 @@ esto hacer pruebas en local, usar HTML o markdown y utilizar todos los
 plugins disponibles para Jekyll
 
 ::: columns
-![image](./Images/jekyll.png){width="40%"}
+![image](../Images/jekyll.png){width="40%"}
 :::
-:::
+::::
 
-::: frame
+::::: frame
 Fin
 
-::: tcolorbox
+:::: tcolorbox
 ::: columns
 Alejandro Barrachina\
 alejba02@ucm.es\
 github.com/alk222
 :::
-:::
+::::
 
-![image](./Images/qr_code.png){width="30%"}
-:::
+![image](../Images/qr_code.png){width="20%"}
+:::::
 
-[^1]:
-    Minutos de uso en procesos linux, los procesos en Windows cuentan
+[^1]: Minutos de uso en procesos linux, los procesos en Windows cuentan
     2x y en MacOs 10x

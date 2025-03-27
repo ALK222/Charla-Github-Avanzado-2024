@@ -73,6 +73,28 @@
     morekeywords={make}
 }
 
+\lstdefinestyle{custombash}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    xleftmargin=\parindent,
+    language=bash,
+    morekeywords={git}
+}
+
 \newcommand\ProcessThreeDashes{\llap{\color{cyan}\mdseries-{-}-}}
 
 
@@ -176,6 +198,22 @@
 
     Nos permite hacer modificaciones a un código ya existente y después mover esos cambios al repositorio original con una \textit{pull request} (o no).
 
+\end{frame}
+
+\subsection{Submódulos}
+\begin{frame}{Submódulos}
+    En el desarrollo de un proyecto, a veces necesitamos otras herramientas o proyectos dentro. Una manera de gestionar esto desde git es el uso de submódulos
+
+    Esto nos permite modularizar el desarollo, mantener todas las herramientas actualizadas de manera sencilla y poder trabajar en distintas partes del proyecto de manera independiente.
+\end{frame}
+
+\begin{frame}[fragile]
+    Para incluir un submódulo en un proyecto, usamos el comando:
+
+    \begin{figure}
+        \begin{lstlisting}[style=custombash]
+git submodule add <url> <ruta del submódulo>\end{lstlisting}
+    \end{figure}
 \end{frame}
 
 \section{Workflows / Actions}
