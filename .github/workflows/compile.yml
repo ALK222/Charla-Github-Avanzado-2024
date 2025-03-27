@@ -11,7 +11,7 @@ jobs:
         with:
           entrypoint: ./compile.sh
       - name: Upload PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: presentacion.pdf
           path: ./presentacion/Presentacion.pdf
